@@ -3,6 +3,7 @@ import classes from "./header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
+import LowerHeader from './LowerHeader'
 
 const Header = () => {
   return (
@@ -60,7 +61,7 @@ const Header = () => {
                   <p>returns</p>
                   <span>& Orders</span>
                 </a>
-      
+
                 <a href="/" className={classes.cart}>
                   <BiCart size={35} />
                   <span>0</span>
@@ -69,7 +70,7 @@ const Header = () => {
             </div>
           </div>
         </section>
-        {/* lower header */}
+        <LowerHeader/>
       </section>
     </>
   );
