@@ -2,14 +2,18 @@
 import './App.css';
 import './index.css'
 import Header from './Components/Header/Header';
-import { Carousel } from 'react-responsive-carousel';
+import CarouselEffect from "./Components/Carousel effect/Carousel";
+import Catagory from "./Components/Catagory/Catagory";
+import Product from './Components/Product/Product';
 
 function App() {
   return (
     <>
-      <Header/>
-      <Carousel/>
-   </>
+      <Header />
+      <CarouselEffect />
+      <Catagory/>
+      <Product/>
+    </>
   );
 }
 
