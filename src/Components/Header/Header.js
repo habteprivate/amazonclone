@@ -16,7 +16,7 @@ const Header = () => {
   }, 0);
   return (
     <>
-      <section>
+      <section className={classes.fixedHeader}>
         <section>
           <div className={classes.header__container}>
             {/* logo */}
