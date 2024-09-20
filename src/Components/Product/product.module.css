@@ -8,10 +8,7 @@
     position: relative;
 }
 
-.Card__container:hover .button{
-    display: block;
 
-}
 
 .Card__container img{
     padding: 10px;
@@ -37,6 +34,10 @@
     left: 0;
 }
 
+.Card__container:hover .button{
+    display: block;
+
+}
 .button:hover{
     background-color: var(--primary-color);
 }

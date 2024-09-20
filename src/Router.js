@@ -6,6 +6,7 @@ import Payment from "./Pages/Payments/Payment";
 import Orders from "./Pages/Order/Order";
 import Cart from "./Pages/Cart/Cart";
 
+export default Routing;
 function Routing() {
   return (
     <Router>
@@ -20,4 +21,4 @@ function Routing() {
   );
 }
 
-export default Routing;
+

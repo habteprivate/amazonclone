@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import classes from "./header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader'
+import { Link } from "react-router-dom";
+import { DataContext } from "../Data Provider/DataProvider";
 
 const Header = () => {
+  const [{ basket }, dispatch] = useContext(DataContext);
+  const totalItem = basket?.reduce((amount, item) => {
+    
+    return item.amount + amount;
+  }, 0);
   return (
     <>
       <section>
@@ -13,12 +21,12 @@ const Header = () => {
           <div className={classes.header__container}>
             {/* logo */}
             <div className={classes.logo__container}>
-              <a href="/">
+              <Link to="/">
                 <img
                   src="https://pngimg.com/uploads/amazon/small/amazon_PNG11.png"
                   alt="amazon logo"
                 />
-              </a>
+              </Link>
               <div className={classes.Delivery}>
                 <span>
                   <SlLocationPin size={20} />
@@ -42,7 +50,7 @@ const Header = () => {
             <div>
               {/* right side link */}
               <div className={classes.order_container}>
-                <a href="/" className={classes.Language}>
+                <Link to="/" className={classes.Language}>
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
                     alt=""
@@ -50,27 +58,27 @@ const Header = () => {
                   <select>
                     <option value="/">EN</option>
                   </select>
-                </a>
+                </Link>
                 {/* three components */}
-                <a href="/" className={classes.sign}>
+                <Link to="/auth" className={classes.sign}>
                   <p>Sign In</p>
                   <span>Account & Lists</span>
-                </a>
+                </Link>
                 {/* orders */}
-                <a href="/">
+                <Link to="/orders">
                   <p>returns</p>
                   <span>& Orders</span>
-                </a>
+                </Link>
 
-                <a href="/" className={classes.cart}>
+                <Link to="/cart" className={classes.cart}>
                   <BiCart size={35} />
-                  <span>0</span>
-                </a>
+                  <span>{totalItem}</span>
+                </Link>
               </div>
             </div>
           </div>
         </section>
-        <LowerHeader/>
+        <LowerHeader />
       </section>
     </>
   );

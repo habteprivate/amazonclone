@@ -30,12 +30,12 @@ export const categoryinfo = [
   {
     title: "Discover fashion trends",
     name: "women's clothing",
-    imgLink: "https://m.media-amazon.com/images/I/71tZwS1riLL._AC_SY679_.jpg",
+    imgLink: "https://m.media-amazon.com/images/I/61SqflFskrL._AC_UL320_.jpg",
   },
   {
     title: "Men's Clothing",
     name: "men's clothing",
-    imgLink: "https://m.media-amazon.com/images/I/81D+bCgn8hL._AC_SX679_.jpg",
+    imgLink: "https://m.media-amazon.com/images/I/71F4P1t80EL._AC_UL320_.jpg",
   },
   {
     title: "Jewelery",

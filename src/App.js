@@ -13,6 +13,7 @@ function App() {
     <>
 
     <Routing/>
+    
       {/* <Header />
       <CarouselEffect />
       <Catagory/>
