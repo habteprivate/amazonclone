@@ -14,10 +14,7 @@ function App() {
 
     <Routing/>
     
-      {/* <Header />
-      <CarouselEffect />
-      <Catagory/>
-      <Product/> */}
+     
     </>
   );
 }

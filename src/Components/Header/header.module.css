@@ -173,6 +173,11 @@ border-radius: 1px;
 
 }
 
+.oulinemenu{
+  display: inline-block;
+  
+}
+
 @media screen and (max-width:576px) {
   .header__container{
     display: flex;

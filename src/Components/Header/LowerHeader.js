@@ -7,13 +7,13 @@ function LowerHeader() {
   return (
     <div className={classes.lower__container}>
       <ul>
-        <li>
+        <li calssName={classes.oulinemenu}>
           <AiOutlineMenu />
           <p>All</p>
         </li>
         <li>Today's Deal</li>
         <li>Customer Service</li>
-        <li>Regestary</li>
+        <li>Regestary </li>
         <li>Gift Cards</li>
         <li>Sale</li>
       </ul>
