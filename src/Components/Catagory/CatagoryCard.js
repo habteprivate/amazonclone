@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CatagoryCard = ({data}) => {
   return ( 
     <div className={classes.CatagoryCard}>
-      <Link to={`/catagory/${data.name}`}>
+      <Link to={`/category/${data.name}`}>
         <span>
           <h2>{data.title}</h2>
         </span>

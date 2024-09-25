@@ -14,7 +14,7 @@ const CarouselEffect = () => {
         showThumbs={false}
       >
         {img.map((imgitemlink) => {
-          return <img src={imgitemlink} alt="/" />;
+          return <img key={imgitemlink} src={imgitemlink} alt="/" />;
         })}
       </Carousel>
     </div>

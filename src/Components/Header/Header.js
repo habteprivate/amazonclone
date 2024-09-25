@@ -4,14 +4,14 @@ import classes from "./header.module.css";
 import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
-import LowerHeader from './LowerHeader'
+import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
 import { DataContext } from "../Data Provider/DataProvider";
+import {auth} from "../../Utility/FireBase"
 
 const Header = () => {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{ user, basket }, dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((amount, item) => {
-    
     return item.amount + amount;
   }, 0);
   return (
@@ -60,9 +60,20 @@ const Header = () => {
                   </select>
                 </Link>
                 {/* three components */}
-                <Link to="/auth" className={classes.sign}>
-                  <p>Sign In</p>
-                  <span>Account & Lists</span>
+                <Link to={!user && "/auth"} className={classes.sign}>
+                  <div>
+                    {user ? (
+                      <>
+                        <p>Hello, {user?.email?.split("@")[0]}</p>
+                        <span onClick={() => auth.signOut()}>Sign Out</span>
+                      </>
+                    ) : (
+                      <>
+                        <p>Hello, Sign in</p>
+                        <span>Account & Lists</span>
+                      </>
+                    )}
+                  </div>
                 </Link>
                 {/* orders */}
                 <Link to="/orders">
