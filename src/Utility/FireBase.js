@@ -1,8 +1,11 @@
-// autentication
+// / autentication
 // Firebase 8 Compatibility Layer
 import firebase from "firebase/compat/app"; 
 import "firebase/compat/firestore"; // Compatibility Firestore
 import "firebase/compat/auth"; // Compatibility Auth
+import { getAuth } from "firebase/auth";
+import {getFirestore} from "firebase/firestore"
+
 
 
 
@@ -22,8 +25,10 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 
 // Initialize Firestore and Auth using compatibility methods
-const db = app.firestore(); // Compatibility Firestore initialization
-export const auth = app.auth(); // Compatibility Auth initialization
+
+export const auth = getAuth(app); // Compatibility Auth initialization
+export const db = getFirestore(app); // Compatibility Firestore initialization
+
 
 
 
